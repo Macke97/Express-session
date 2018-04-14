@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+  .main.container.clearfix
+    .row
+      .col-md-8.col-md-offset-2
+        h1.display-4
+          img.avatar.img-circle.hidden-xs-down(src=userImage alt="avatar" onerror="this.onerror=null;this.src='/images/avatar.png';")
+          | Hello #{name}!
+    .row
+      p Your member id is <strong style="text-decoration: underline;">#{user._id}</strong>
+    .row
+      .col-md-12
+        p Your full name is: <span style="font-weight: bold; text-decoration: underline"> #{fullName} </span>
